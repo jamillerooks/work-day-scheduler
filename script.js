@@ -31,7 +31,18 @@ descriptionEl.each(function(index){
   }
 })
 
-  
+  //Local Storage Section
+function retreiveItem (event) {
+  event.preventDefault();
+  var description = ($(this).prev().val());
+  var hour =   ($(this).prev().prev().text());
+  if (description !== "")
+  localStorage.getItem(hour, description);
+  hourEl.textContent = hour;
+  documentEl.textContent = description;
+   
+  };
+
 //Save appointment in the local storage
 $('.saveBtn').on('click', saveItem);
 
@@ -42,16 +53,9 @@ $('.saveBtn').on('click', saveItem);
     var hour =   ($(this).prev().prev().text());
     if (description !== "")
     localStorage.setItem(hour, description);
+    
      
     };
 
-    function renderLastRegistered() {
-      var hour = localStorage.getItem("hour");
-      var description = localStorage.getItem("description");
+
     
-      if (hour && description) {
-        return;
-      }
-        hourEl.textContent = hour;
-        descriptionEl.textContent = description;
-    }
