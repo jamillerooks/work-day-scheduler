@@ -44,151 +44,51 @@
 		</header>
 		<div class="container">
 			<!-- Timeblocks go here -->
-			<form class="row">
-				<div class="col-2 time-block hour" id="9">9am</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot9"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="10">10am</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot10"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="11">11am</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot11"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="12">12pm</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot12"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="1">1pm</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot1"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="2">2pm</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot2"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="3">3pm</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot3"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="4">4pm</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot4"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-			<form class="row">
-				<div class="col-2 time-block hour" id="5">5pm</div>
-				<div class="time-slot col-8">
-					<textarea
-						id="slot5"
-						class="description"
-						rows="2"
-						cols="85"
-					></textarea>
-				</div>
-				<div class="col saveBtn">
-					<button type="submit" onclick="saveToSchedule(event)">
-						<i class="far fa-save"></i>
-					</button>
-				</div>
-			</form>
-		</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">9:00am</div>
+				<textarea id="9" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">10:00am</div>
+				<textarea id ="10" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">11:00am</div>
+				<textarea id="11" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">12:00pm</div>
+				<textarea id="12" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">1:00pm</div>
+				<textarea id="13" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">2:00pm</div>
+				<textarea id="14" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">3:00pm</div>
+				<textarea id="15" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">4:00pm</div>
+				<textarea id="16" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
+			<div  class="row calendar-form " >
+				<div id="apptTime"  class="col-2 time-block hour">5:00pm</div>
+				<textarea id="17" name="apptDetail" maxLength="50" style="resize: none; overflow: hidden;" class=" description  col-8"></textarea> 
+				<button id = "saveItem" class="saveBtn col" type="submit" ><i class="far fa-save"></i></button>
+			</div>
 
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
