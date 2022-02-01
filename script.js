@@ -1,61 +1,55 @@
 $(document).ready(() => {
-
-});
   //Enter today's date in the header
   var currentDayEl = $('#currentDay');
-    const m = moment(); 
-
+  const m = moment(); 
+  
   function displayDate() {
-    var presentDay = moment().format('dddd, MMMM Do');
-    currentDayEl.text(presentDay);
-}
-setInterval(displayDate, 1000);
-
-//Elements from DOM
-  var currentTime = moment();
-  var currentHour = parseInt(moment().format("HH"));
-  var formEl = $('.calendar-form');
-  var hourEl = $('.hour');
-  var descriptionEl = $('.description');
-  var saveBtn = $('.saveBtn');
-
-//Change color based on the time of the appointment
-descriptionEl.each(function(index){
-  var rowTime = $(this).attr("id")
-  if(parseInt(rowTime) < currentHour) {
-    $(this).attr("class", "description col-8 past")
-  }else if(parseInt(rowTime) == currentHour) {
-    $(this).attr("class", "description col-8 present")
-  }else {
-    $(this).attr("class", "description col-8 future")
+  var presentDay = moment().format('dddd, MMMM Do');
+  currentDayEl.text(presentDay);
   }
-})
-
-  //Local Storage Section
-function retreiveItem (event) {
-  event.preventDefault();
-  var description = ($(this).prev().val());
-  var hour =   ($(this).prev().prev().text());
-  if (description !== "")
-  localStorage.getItem(hour, description);
-  hourEl.textContent = hour;
-  documentEl.textContent = description;
+  setInterval(displayDate, 1000);
+  
+  //Elements from DOM
+  var currentHour = parseInt(moment().format("HH"));
+  var descriptionEl = $('.description');
+  
+  
+  //Save appointment in the local storage
+  $('.saveBtn').on('click', saveItem);
+  
    
-  };
-
-//Save appointment in the local storage
-$('.saveBtn').on('click', saveItem);
-
- 
+  //Save data to local storage
   function saveItem (event) {
     event.preventDefault();
     var description = ($(this).prev().val());
     var hour =   ($(this).prev().prev().text());
     if (description !== "")
     localStorage.setItem(hour, description);
-    
-     
+       
     };
+  
+  //Retrieve data from local storage
+  $("#9").val(localStorage.getItem("9:00am"));
+  $("#10").val(localStorage.getItem("10:00am"));
+  $("#11").val(localStorage.getItem("11:00am"));
+  $("#12").val(localStorage.getItem("12:00am"));
+  $("#13").val(localStorage.getItem("13:00am"));
+  $("#14").val(localStorage.getItem("14:00am"));
+  $("#15").val(localStorage.getItem("15:00am"));
+  $("#16").val(localStorage.getItem("16:00am"));
+  $("#17").val(localStorage.getItem("17:00am"));
 
-
+    
+  //Change color based on the time of the appointment
+    descriptionEl.each(function(index){
+    var rowTime = $(this).attr("id")
+    if(parseInt(rowTime) < currentHour) {
+    $(this).attr("class", "description col-8 past")
+    }else if(parseInt(rowTime) == currentHour) {
+    $(this).attr("class", "description col-8 present")
+    }else {
+    $(this).attr("class", "description col-8 future")
+    }
+    })
+  });
     
