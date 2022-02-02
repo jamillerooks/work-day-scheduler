@@ -14,7 +14,7 @@ $(document).ready(() => {
   var descriptionEl = $('.description');
   
   
-  //Save appointment in the local storage
+  //EvenHandler for saving appointments to the calendar
   $('.saveBtn').on('click', saveItem);
   
    
@@ -28,7 +28,7 @@ $(document).ready(() => {
        
     };
   
-  //Retrieve data from local storage
+  //Retrieve data from local storage using DOM id and storage key
   $("#9").val(localStorage.getItem("9:00am"));
   $("#10").val(localStorage.getItem("10:00am"));
   $("#11").val(localStorage.getItem("11:00am"));
