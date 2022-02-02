@@ -32,12 +32,12 @@ $(document).ready(() => {
   $("#9").val(localStorage.getItem("9:00am"));
   $("#10").val(localStorage.getItem("10:00am"));
   $("#11").val(localStorage.getItem("11:00am"));
-  $("#12").val(localStorage.getItem("12:00am"));
-  $("#13").val(localStorage.getItem("13:00am"));
-  $("#14").val(localStorage.getItem("14:00am"));
-  $("#15").val(localStorage.getItem("15:00am"));
-  $("#16").val(localStorage.getItem("16:00am"));
-  $("#17").val(localStorage.getItem("17:00am"));
+  $("#12").val(localStorage.getItem("12:00pm"));
+  $("#13").val(localStorage.getItem("13:00pm"));
+  $("#14").val(localStorage.getItem("14:00pm"));
+  $("#15").val(localStorage.getItem("15:00pm"));
+  $("#16").val(localStorage.getItem("16:00pm"));
+  $("#17").val(localStorage.getItem("17:00pm"));
 
     
   //Change color based on the time of the appointment
